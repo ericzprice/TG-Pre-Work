@@ -29,6 +29,10 @@ h2.destination {
   text-transform: capitalize;
 }
 
+h5 {
+	color: rebeccapurple;
+}
+
 .description h5 {
   color: teal;
 }
