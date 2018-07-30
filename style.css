@@ -1,27 +1,30 @@
 p {
-    font-family: Arial;
+  font-family: Arial;
 }
 
 h1 {
-      color: maroon;
+  color: maroon;
+}
+
+h2.destination {
+  font-family: cursive;
 }
 
 .title {
-                color: teal;
+  color: teal;
 }
 
 .uppercase {
-          text-transform: uppercase;
+  text-transform: uppercase;
 }
-
 .publish-time {
-          color: gray;
+  color: gray;
 }
 
 .cursive {
-          font-family: cursive;
+  font-family: cursive;
 }
 
 .capitalize {
-          text-transform: capitalize;
+  text-transform: capitalize;
 }
