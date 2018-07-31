@@ -10,6 +10,7 @@ body {
 }
 
 h1 {
+  text-align: center;
   font-family: "Georgia";
   color: #FFF;
   font-size: 2em;
@@ -30,6 +31,8 @@ h2 {
 }
 
 p {
+  font-size: 18px;
+  font-weight: bold;
   font-family: "Helvetica";
   color: AliceBlue;
   line-height: 1.3em;
@@ -47,6 +50,8 @@ p {
 }
 
 .caption {
+  color: black;
+  background-color: white;
   display: block;
   font-family: 'Playfair Display', serif;
   font-size: 14px;
