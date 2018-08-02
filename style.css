@@ -1,4 +1,4 @@
-/* Hexadecimal */
+/* RGB Colors */
 body {
   padding: 0;
   margin: 0;
@@ -52,15 +52,15 @@ body {
 
 /* Roast types */
 .green {
-  background-color: #8FBC8F;
+  background-color: rgb(143, 188, 143);
 }
 
 .light {
-  background-color: #A0522D;
+  background-color: rgb(160, 82, 45);
 }
 
 .city {
-  background-color: #8B4513;
+  background-color: rgb(139, 69, 19);
 }
 
 .vienna {
@@ -147,4 +147,5 @@ a {
   text-decoration: none;
   letter-spacing: 2px;
 }
-/* End Hexadecimal */
+
+/* End RGB Colors */
