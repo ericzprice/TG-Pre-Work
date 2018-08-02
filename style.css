@@ -1,4 +1,4 @@
-/* CSS Color Foreground vs Background */
+/* Hexadecimal */
 body {
   padding: 0;
   margin: 0;
@@ -52,23 +52,23 @@ body {
 
 /* Roast types */
 .green {
-  background-color: DarkSeaGreen;
+  background-color: #8FBC8F;
 }
 
 .light {
-  background-color: Sienna;
+  background-color: #A0522D;
 }
 
 .city {
-  background-color: SaddleBrown;
+  background-color: #8B4513;
 }
 
 .vienna {
-  background-color: Brown;
+  background-color: #A52A2A;
 }
 
 .italian {
-  background-color: Black;
+  background-color: #000000;
 }
 
 /* Typography */
@@ -147,3 +147,4 @@ a {
   text-decoration: none;
   letter-spacing: 2px;
 }
+/* End Hexadecimal */
