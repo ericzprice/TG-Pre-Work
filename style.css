@@ -1,4 +1,4 @@
-/* RGB Colors */
+/* Hex and RGB */
 body {
   padding: 0;
   margin: 0;
@@ -52,23 +52,23 @@ body {
 
 /* Roast types */
 .green {
-  background-color: rgb(143, 188, 143);
+  background-color: #9EB599;
 }
 
 .light {
-  background-color: rgb(160, 82, 45);
+  background-color: #683C2C;
 }
 
 .city {
-  background-color: rgb(139, 69, 19);
+  background-color: #4C352D;
 }
 
 .vienna {
-  background-color: #A52A2A;
+  background-color: #352926;
 }
 
 .italian {
-  background-color: #000000;
+  background-color: #141212;
 }
 
 /* Typography */
@@ -148,4 +148,4 @@ a {
   letter-spacing: 2px;
 }
 
-/* End RGB Colors */
+/* End Hex and RGBs */
