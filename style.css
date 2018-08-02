@@ -29,12 +29,13 @@ li {
   padding: 0px 50px;
 }
 
-.banner {
+#banner {
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_tahoe.jpeg");
   background-size: cover;
   background-position: bottom center;
   height: 700px;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 #banner-content {
