@@ -1,38 +1,99 @@
-/* Opacity and Alpha */
-html,
+/* CSS Display and positioning: Position */
 body {
-  margin: 0;
-  height: 100%;
+  background-color: #FFF;
+  margin: 0 auto;
 }
 
-.wrapper {
-  position: relative;
-  margin: auto;
-  padding: 0;
-  max-width: 75vw;
+header {
+  background-color: #466995;
+  border-bottom: 1px solid #466995;
 }
 
-.midground, .foreground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  margin: 15vh 0 0 15vw;
-  padding: 0;
-  width: 35vw;
-  height: 59vh;
+ul {
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
-body {
-  background-color: rgba(0, 255, 0, 0.1);
+li {
+  color: #FFF;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
-.midground {
-  background-color: hsla(225, 100%, 25%, 0.4);
+li:hover {
+  color: #DBE9EE;
 }
 
-.foreground {
-  background-color: hsla(325, 50%, 50%, 0.6);
+h1 {
+  color: #466995;
+  font-family: 'Oswald', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
-/* End Opacity and Alpha */
+h2 {
+  color: #333;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 26px;
+  font-weight: 100;
+  margin: 0 auto 20px auto;
+}
+
+h3 {
+  color: #466995;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 30px;
+}
+
+h4 {
+  color: #466995;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase
+}
+
+p {
+  color: #333;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+}
+
+footer {
+  background-color: #DBE9EE;
+  text-align: center;
+}
+
+.welcome {
+  background-color: #DBE9EE;
+  box-sizing: border-box;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.question {
+  text-align: center;
+  position: static;
+}
+
+.answer {
+  border: 1px solid #466995;
+  margin: 20px;
+}
+
+.answer:hover {
+  background: #C0D6DF;
+  color: #FFF;
+}
+/* CSS Display and positioning: Position */
