@@ -1,4 +1,4 @@
-/* Typography: Text Transformation */
+/* Typography: Text Alignment */
 
 /* Universal Styles */
 
@@ -16,6 +16,7 @@ h1 {
   font-size: 28px;
   font-family: Georgia;
   text-transform: uppercase;
+  text-align: center;
 }
 
 h2 {
@@ -164,4 +165,5 @@ a.home {
     display: none;
   }
 }
-/* End Typography: Text Transformation */
+
+/* End Typography: Text Alignment */
