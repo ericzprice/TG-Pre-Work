@@ -1,6 +1,5 @@
-/* Typography: Font Weight */
+/* Typography: Font Weight 2*/
 
-/* Universal Styles */
 
 html {
   font-size: 16px;
@@ -54,6 +53,7 @@ strong {
   position: fixed;
   top: 0;
   width: 100%;
+  font-weight: 900;
 }
 
 .header li {
@@ -160,4 +160,4 @@ a.home {
   }
 }
 
-/* End Typography: Font Weight */
+/* End Typography: Font Weight 2 */
