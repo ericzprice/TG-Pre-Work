@@ -1,115 +1,114 @@
-<!-- Clear -->
+<!-- Typography: Font Family -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Please Participate in Our Survey!</title>
-  <link href="https://fonts.googleapis.com/css?family=Oswald:300,700|Varela+Round" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Typography Blog</title>
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 
-  <header>
+  <!-- Header -->
+  <nav class="header">
     <ul>
-      <li>Question 1</li>
-      <li>Question 2</li>
-      <li>Question 3</li>
-      <li>Question 4</li>
-      <li>Question 5</li>
+      <li><a class="home" href="#top">FAVORITE FONTS</a></li>
+      <li><a class="pagelink" href="#serif">SERIF</a></li>
+      <li><a class="pagelink" href="#sans">SANS-SERIF</a></li>
+      <li><a class="pagelink" href="#mono">MONOSPACED</a></li>
     </ul>
-  </header>
+  </nav>
 
-  <div class="welcome">
-    <h1><strong>Welcome</strong>to our survey!</h1>
-    <p>We're looking forward to getting your answers so we can make sure our products and services are the best they can be!</p>
+  <!-- Banner Section -->
+  <div class="banner">
+    <h1>Typography</h1>
+      <p>While typography has been practiced for many centuries, digital font design is a relatively new discipline. There are some great examples of old-school fonts (also called typefaces) which have been adapted for use on digital displays. However, I would like to highlight a few of my favorite fonts that were created with screens in mind.</p>
   </div>
 
-  <div class="question">
-    <h4>Question 1</h4>
-    <h2>I like participating in physical activity such as running, swimming, or biking.</h2>
+  <!-- Serif Section -->
+  <div id="serif">
 
-    <div class="answer">
-      <h3>Disagree</h3>
+    <!-- Editorial Section - Serif -->
+    <div class="editorial">
+      <h2>Serif</h2>
+      <p>Serifs are the small features at the end of strokes within letters. These features are <strong>functional as well as decorative</strong>. Serif fonts are widely used for body text (eg. articles) because they are considered easier to read than sans-serif fonts in print.</p>
+      <p><em>Serif fonts can often create a feeling of traditionalism and antiquity, due to their common use in printed materials for many years.</em></p>
     </div>
 
-    <div class="answer">
-      <h3>Neutral</h3>
-    </div>
-
-    <div class="answer">
-      <h3>Agree</h3>
-    </div>
-  </div>
-
-  <div class="question">
-    <h4>Question 2</h4>
-    <h2>I try to keep up to date with the latest fashion in active wear.</h2>
-
-    <div class="answer">
-      <h3>Disagree</h3>
-    </div>
-
-    <div class="answer">
-      <h3>Neutral</h3>
-    </div>
-
-    <div class="answer">
-      <h3>Agree</h3>
-    </div>
-  </div>
-
-  <div class="question">
-    <h4>Question 3</h4>
-    <h2>I purchase clothing online regularly.</h2>
-
-    <div class="answer">
-      <h3>Disagree</h3>
-    </div>
-
-    <div class="answer">
-      <h3>Neutral</h3>
-    </div>
-
-    <div class="answer">
-      <h3>Agree</h3>
+    <!-- Font Card - Serif -->
+    <div class="font-card garamond">
+      <h2>Garamond</h2>
+      <p class="creator">by Claude Garamond (16th Century)</p>
+      <div class="garamond">
+        <span class="sample">
+          <h2>Bold</h2>
+          <span class="bold text">Abc</span>
+        </span>
+        <span class="sample">
+          <h2>Regular</h2>
+          <span class="regular text">Abc</span>
+        </span>
+        <span class="sample">
+          <h2>Italic</h2>
+          <span class="italic text">Abc</span>
+        </span>
+      </div>
     </div>
   </div>
 
-  <div class="question">
-    <h4>Question 4</h4>
-    <h2>I try to buy goods that are designed and/or manufactured in my home country.</h2>
+  <!-- Sans-Serif Section -->
+  <div id="sans">
 
-    <div class="answer">
-      <h3>Disagree</h3>
+    <!-- Editorial Section - Sans-Serif -->
+    <div class="editorial">
+      <h2>Sans-Serif</h2>
+      <p>Sans-Serif ("without serif") describes fonts with characters which lack flourishes at the ends of the strokes. Sans-serif fonts have become the most prevalent for display of text on computer screens, as on lower-resolution digital displays, fine details like serifs may disappear or appear too large.</p>
+      <p><em>Sans-serif fonts are often used to project an image of simplicity, modernity or minimalism.</em></p>
     </div>
 
-    <div class="answer">
-      <h3>Neutral</h3>
-    </div>
-
-    <div class="answer">
-      <h3>Agree</h3>
-    </div>
-  </div>
-
-  <div class="question">
-    <h4>Question 5</h4>
-    <h2>I look to famous athletes when trying to choose what to wear when training.</h2>
-
-    <div class="answer">
-      <h3>Disagree</h3>
-    </div>
-
-    <div class="answer">
-      <h3>Neutral</h3>
-    </div>
-
-    <div class="answer">
-      <h3>Agree</h3>
+    <!-- Font Card - Sans-Serif -->
+    <div class="font-card">
+      <h2>Helvetica</h2>
+      <p class="creator">by Max Miedinger & Eduard Hoffman (1957)</p>
+      <div class="helvetica">
+        <span class="sample">
+          <h2>Bold</h2>
+          <span class="bold text">Abc</span>
+        </span>
+        <span class="sample">
+          <h2>Regular</h2>
+          <span class="regular text">Abc</span>
+        </span>
+      </div>
     </div>
   </div>
-<footer>
-  <h3>"Thanks for taking our survey!"</h3>
-</footer>
+
+  <!-- Monospaced Section -->
+  <div id="mono">
+
+    <!-- Editorial - Monospaced -->
+    <div class="editorial">
+      <h2>Monospaced</h2>
+      <p>A monospaced font's characters each occupy the same amount of horizontal space. This contrasts with most fonts, where the letters and spacings have different widths. For example, the two high-use letters "I" and "E" do not need the same footprint. The first monospaced Western typefaces were designed for typewriters.</p>
+      <p><em>Many text editors (like those used to write computer code) use monospaced fonts, which aid in distinguishing between potentially similar characters (like "l" and "1") and in counting the number of characters in a line.</em></p>
+    </div>
+
+    <!-- Font Card - Monospaced -->
+    <div class="font-card">
+      <h2>Space Mono</h2>
+      <p class="creator">by Colophon Foundry (2016)</p>
+      <div class="space">
+        <span class="sample">
+          <h2>Bold</h2>
+          <span class="bold text">Abc</span>
+        </span>
+        <span class="sample">
+          <h2>Regular</h2>
+          <span class="regular text">Abc</span>
+        </span>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
-<!-- End Clear-->
+
+<!-- End Typography: Font Family-->
