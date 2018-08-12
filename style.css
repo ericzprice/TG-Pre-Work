@@ -1,4 +1,4 @@
-/* Inline-Block Display */
+/* Clear */
 
 body {
   background-color: #FFF;
@@ -99,7 +99,7 @@ footer {
 .answer {
   border: 1px solid #466995;
   margin: 20px;
-  display: inline-block
+  display: inline-block;
 }
 
 .answer:hover {
@@ -110,4 +110,4 @@ footer {
 footer {
   height: 100px;
 }
-/* Inline-Block Display */
+/* End Clear */
