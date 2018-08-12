@@ -1,4 +1,4 @@
-/* Typography: Text Alignment */
+/* Typography: Line Height */
 
 /* Universal Styles */
 
@@ -91,6 +91,7 @@ a.home {
   padding: 10px;
   color: #ffffff;
   font-weight: bold;
+  line-height: 1.4;
 }
 
 /* Editorial Sections */
@@ -166,4 +167,4 @@ a.home {
   }
 }
 
-/* End Typography: Text Alignment */
+/* End Typography: TLine Height */
