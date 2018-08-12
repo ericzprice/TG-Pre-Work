@@ -1,4 +1,4 @@
-/* Typography: Letter Spacing */
+/* Typography: Text Transformation */
 
 /* Universal Styles */
 
@@ -15,6 +15,7 @@ h1 {
   color: white;
   font-size: 28px;
   font-family: Georgia;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -163,6 +164,4 @@ a.home {
     display: none;
   }
 }
-
-
-/* End Typography: Letter Spacing */
+/* End Typography: Text Transformation */
