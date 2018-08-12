@@ -1,7 +1,6 @@
-/* Typography: Word Spacing */
+/* Typography: Letter Spacing */
 
 /* Universal Styles */
-
 
 html {
   font-size: 16px;
@@ -24,6 +23,7 @@ h2 {
   line-height: 2.5;
   font-family: Georgia;
   word-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 a {
@@ -164,4 +164,5 @@ a.home {
   }
 }
 
-/* End Typography: FWord Spacing */
+
+/* End Typography: Letter Spacing */
