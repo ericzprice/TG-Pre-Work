@@ -1,4 +1,4 @@
-/* Inline Display */
+/* Block Display */
 
 body {
   background-color: #FFF;
@@ -103,3 +103,9 @@ footer {
   background: #C0D6DF;
   color: #FFF;
 }
+
+footer {
+  height: 100px;
+}
+
+/* End Block Display */
