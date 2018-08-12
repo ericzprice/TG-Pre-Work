@@ -1,5 +1,6 @@
-/* Typography: Font Weight 2*/
+/* Typography: Font Style */
 
+/* Universal Styles */
 
 html {
   font-size: 16px;
@@ -108,6 +109,7 @@ a.home {
 .font-card .creator {
   font-size: 20px;
   line-height: 1.25;
+  font-style: italic;
 }
 
 .sample {
@@ -160,4 +162,4 @@ a.home {
   }
 }
 
-/* End Typography: Font Weight 2 */
+/* End Typography: Font Style */
