@@ -1,4 +1,4 @@
-/* Typography: Line Height */
+/* Typography: Fallback Fonts */
 
 /* Universal Styles */
 
@@ -133,8 +133,14 @@ a.home {
 }
 
 /* Add styles for the Garamond font here */
+.garamond .sample .text {
+  font-family: "Garamond", serif;
+}
 
 /* Add styles for the Helvetica font here */
+.helvetica .sample .text {
+  font-family: "Helvetica", sans-serif;
+}
 
 /* Add styles for the Space Mono font here */
 
@@ -167,4 +173,4 @@ a.home {
   }
 }
 
-/* End Typography: TLine Height */
+/* End Typography: Fallback Fonts */
