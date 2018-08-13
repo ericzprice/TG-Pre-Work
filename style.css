@@ -1,4 +1,4 @@
-/* Typography: Fallback Fonts */
+/* Typography: Linking Fonts 1&2 */
 
 /* Universal Styles */
 
@@ -143,6 +143,9 @@ a.home {
 }
 
 /* Add styles for the Space Mono font here */
+.space .sample .text {
+  font-family: "Space Mono", monospace;
+}
 
 .bold {
   font-weight: 900;
@@ -173,4 +176,5 @@ a.home {
   }
 }
 
-/* End Typography: Fallback Fonts */
+
+/* End Typography:  Linking Fonts 1&2 */
