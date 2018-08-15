@@ -1,4 +1,4 @@
-/* Advanced CSS Grid: Justify Items */
+/* Advanced CSS Grid: Justify Content */
 
 header, footer {
   background-color: #ffa500;
@@ -15,6 +15,10 @@ main {
   grid-auto-rows: 500px;
   /* justify-items: end; */
   justify-items: center;
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* justify-content: end; */
+  justify-content: center;
 }
 
 h2 {
@@ -92,4 +96,4 @@ img {
 footer {
   margin-top: 44px;
 }
-/* Advanced CSS Grid: Justify Items */
+/* Advanced CSS Grid: Justify Content */
