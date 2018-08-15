@@ -1,4 +1,4 @@
-/* Advanced CSS Grid: Align Content */
+/* Advanced CSS Grid: Justify Self and Align Self */
 header, footer {
   background-color: #ffa500;
   text-align: center;
@@ -16,7 +16,6 @@ main {
   justify-content: center;
   align-items: stretch;
   height: 1600px;
-  /* align-content: end; */
   align-content: center;
 }
 
@@ -42,11 +41,11 @@ img {
 }
 
 .a {
-
+  /* align-self: end; */
 }
 
 .c {
-
+  /* justify-self: start; */
 }
 
 .time {
@@ -95,4 +94,4 @@ img {
 footer {
   margin-top: 44px;
 }
-/* Advanced CSS Grid: Align Content */
+/* Advanced CSS Grid: Justify Self and Align Self */
