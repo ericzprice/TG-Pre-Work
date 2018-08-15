@@ -1,4 +1,32 @@
-/* Typography: Website Client Corrections 1-6 */
+/* Typography: Website Client Corrections 7-9 */
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Merriweather Italic'), local('Merriweather-Italic'), url(https://fonts.gstatic.com/s/merriweather/v19/u-4m0qyriQwlOrhSvowK_l5-eRZOf-LVrPHp.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Work Sans ExtraBold'), local('WorkSans-ExtraBold'), url(https://fonts.gstatic.com/s/worksans/v3/QGYpz_wNahGAdqQ43Rh324b8mNhNy_r-Kw.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(https://fonts.gstatic.com/s/abrilfatface/v9/zOL64pLDlL1D99S8g8PtiKchq-dmjcDidBc.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Croissant One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Croissant One'), local('CroissantOne-Regular'), url(https://fonts.gstatic.com/s/croissantone/v5/3y9n6bU9bTPg4m8NDy3Kq24UA31gnrUeN-8.woff2) format('woff2');
+}
 
 html {
   font-size: 18px;
@@ -199,6 +227,7 @@ footer .content {
 
 footer p {
   padding-bottom: 1.66rem;
+  font-family: Croissant One,               "Merriweather", serif;
 }
 
 footer p:last-child {
@@ -225,4 +254,4 @@ footer em {
     overflow: hidden;
   }
 }
-/* End Typography:  Website Client Corrections 1-6 */
+/* End Typography:  Website Client Corrections 7-9 */
