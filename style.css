@@ -1,24 +1,14 @@
-/* Grid Essentials: Grid Area  */
+/* Grid Essentials: Review  */
 
 .grid {
-  display: grid;
   border: 2px blue solid;
   height: 500px;
   width: 500px;
-  grid-template: repeat(4, 1fr 2fr) / repeat(4, 3fr 2fr);
-  grid-gap: 5px;
-}
-
-.a {
-  grid-area: 5 / 1 / span 2 / span 2;
-}
-
-.b {
-  grid-area: 2 / 2 / span 3 / span 6;
-}
-
-.c {
-  grid-area: 6 / 8 / span 3 / span 1;
+  display: grid;
+  grid-template-columns: 25% 25% 2fr 1fr;
+  grid-template-rows: 200px 200px;
+  grid-row-gap: 10px;
+  grid-column-gap: 15px;
 }
 
 .box {
@@ -27,4 +17,11 @@
   border-radius: 5px;
   border: 2px dodgerblue solid;
 }
-/* End Grid Essentials: Grid Area */
+
+.a {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+/* End Grid Essentials: Review */
