@@ -1,27 +1,46 @@
-/* Grid Essentials: Review  */
+/* Advanced CSS Grid: Grid template Areas */
 
-.grid {
-  border: 2px blue solid;
-  height: 500px;
-  width: 500px;
+.container {
   display: grid;
-  grid-template-columns: 25% 25% 2fr 1fr;
-  grid-template-rows: 200px 200px;
-  grid-row-gap: 10px;
-  grid-column-gap: 15px;
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  grid-gap: 10px;
+  grid-template-areas:"header header"
+                        "nav nav"
+                        "left right"
+                        "footer footer";
+  grid-template-columns: 200px 400px;
+  grid-template-rows: 150px 200px 600px     200px;
 }
 
-.box {
+h1, h2 {
+  font-family: monospace;
+  text-align: center;
+}
+
+header {
+  background-color: dodgerblue;
+  grid-area: header;
+}
+
+nav {
   background-color: beige;
-  color: black;
-  border-radius: 5px;
-  border: 2px dodgerblue solid;
+  grid-area: nav;
 }
 
-.a {
-  grid-column-start: 1;
-  grid-column-end: span 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
+.left {
+  background-color: dodgerblue;
+  grid-area: left;
 }
-/* End Grid Essentials: Review */
+
+.right {
+  background-color: beige;
+  grid-area: right;
+}
+
+footer {
+  background-color: dodgerblue;
+  grid-area: footer;
+}
+/* Advanced CSS Grid: Grid template Areas */
