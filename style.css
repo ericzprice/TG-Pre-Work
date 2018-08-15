@@ -1,4 +1,4 @@
-/* Grid Essentials: Creating Columns */
+/* Grid Essentials: Creating Rows */
 
 .grid {
   border: 2px blue solid;
@@ -6,6 +6,7 @@
   height: 500px;
   display: grid;
   grid-template-columns: 100px 50% 200px;
+  grid-template-rows: 40% 50% 50px;
 }
 
 .box {
@@ -14,4 +15,4 @@
   border-radius: 5px;
   border: 2px dodgerblue solid;
 }
-/* End Grid Essentials: Creating Columns */
+/* End Grid Essentials: Creating Rows */
