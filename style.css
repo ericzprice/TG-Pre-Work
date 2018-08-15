@@ -1,10 +1,14 @@
-/* Grid Essentials: minmax */
+/* Grid Essentials: Grid Gap */
 
 .grid {
   display: grid;
   border: 2px blue solid;
   height: 500px;
-  grid-template: repeat(3, 1fr) / 3fr minmax(50px, 300px) 1fr;
+  width:400px;
+  grid-template: repeat(3, 1fr) / 3fr 50% 1fr;
+  /* grid-row-gap: 20px;
+  grid-column-gap: 5px; */
+  grid-gap: 20px 5px;
 }
 
 .box {
@@ -13,4 +17,4 @@
   border-radius: 5px;
   border: 2px dodgerblue solid;
 }
-/* End Grid Essentials: minmax */
+/* End Grid Essentials: Grid Gap */
