@@ -1,250 +1,167 @@
-// Intro to Control Flow
-let userName = 'Eric';
-let knowsJavaScript = true;
+// Intro to Functions
+let calculatorIsOn = false;
 
-if (knowsJavaScript && userName) {
-  console.log('Great, ' + userName + '! Get ready to practice your JavaScript!');
-} else if (knowsJavaScript) {
-  console.log('Great! Get ready to practice your JavaScript!');
-} else if (userName) {
-  console.log('Great, ' + userName + '! Get ready to learn something new!');
-} else {
-  console.log('Great! Get ready to learn something new!');
-}
-// End Intro to Control Flow
+const pressPowerButton = () => {
+//     () =>, indicating the variable stores a function. This syntax is known as arrow function syntax. In JavaScript, any code between curly braces is also known as a block.
+ if (calculatorIsOn) {
+   console.log('Calculator turning off.');
+   calculatorIsOn = false;
+ } else {
+   console.log('Calculator turning on.');
+   calculatorIsOn = true;
+ }
+};
+
+pressPowerButton();
+// Output: Calculator turning on.
+
+pressPowerButton();
+// Output: Calculator turning off.
+//
+//End Intro to Functions
+
+
+// Functions
+const takeOrder = () => {
+  console.log('Order: pizza')
+};
+
+takeOrder();
+
+// End Functions
 //
 //
-// if/else statements
-// Write an if/else statement that uses isSoccerFan as its condition. If it is true, then log, Goal!. If it is false, then log, No goal!.
-let isSoccerFan = true;
-if (isSoccerFan === true) {
-  console.log('Goal!');
-} else {
-  console.log('No goal!');
-}
-// End if/else statements
-//
-//
-//True and False Values 1 and 2
-// let wordCount = 1;
+// Parameters 1 and 2
+const takeOrder = (topping) => {
+  console.log('Order: pizza topped with ' + topping);
+};
 
-if (wordCount) {
-  console.log("Great! You've started your work!");
-} else {
-  console.log('Better get to work!');
-}
+takeOrder('onions');
 
-
-let favoritePhrase = 'You dropped your smile!';
-
-if (!favoritePhrase) {
-  console.log("This string doesn't seem to be empty.");
-} else {
-  console.log('This string is definitely empty.');
-}
-// End True and False Values
-
-
-// Comparison Operators 1 and 2
-let hungerLevel = 5;
-if (hungerLevel > 7) {
-  console.log('Time to eat!');
-} else {
-  console.log("We can eat later!");
-}
-
-let hungerLevel = 10;
-if (hungerLevel > 7) {
-  console.log('Time to eat!');
-} else {
-  console.log("We can eat later!");
-}
 
 // Part 2
-let moonPhase = 'full';
+const takeOrder = (topping, crustType) => {
+  console.log('Order: ' + crustType + ' pizza topped with ' + topping);
+};
 
-if (moonPhase === 'full') {
-  console.log('Howl!');
-} else {
-  console.log('I swear I am not a werewolf.');
-}
-// End Comparison Operators
+takeOrder('bacon', 'tossed crust');
+takeOrder('garlic', 'thin crust');
+takeOrder('sausage', 'stuffed crust');
+// Browser:
+// Order: tossed crust pizza topped with bacon
+// Order: thin crust pizza topped with garlic
+// Order: stuffed crust pizza topped with sausage
 
-
-// else if Statements
-let moonPhase = 'full';
-
-if (moonPhase === 'full') {
-  console.log('Howl!');
-} else if (moonPhase === 'mostly full') {
-  console.log('Arms and legs are getting hairier');
-} else if (moonPhase === 'mostly new') {
-  console.log('Back on two feet');
-} else {
-  console.log('Invalid moon phase');
-}
-
-// #2
-let moonPhase = 'mostly full';
-
-if (moonPhase === 'full') {
-  console.log('Howl!');
-} else if (moonPhase === 'mostly full') {
-  console.log('Arms and legs are getting hairier');
-} else if (moonPhase === 'mostly new') {
-  console.log('Back on two feet');
-} else {
-  console.log('Invalid moon phase');
-}
-
-// #3
-let moonPhase = 'mostly new';
-
-if (moonPhase === 'full') {
-  console.log('Howl!');
-} else if (moonPhase === 'mostly full') {
-  console.log('Arms and legs are getting hairier');
-} else if (moonPhase === 'mostly new') {
-  console.log('Back on two feet');
-} else {
-  console.log('Invalid moon phase');
-}
-
-// #4
-let moonPhase = 'solar eclipse';
-
-if (moonPhase === 'full') {
-  console.log('Howl!');
-} else if (moonPhase === 'mostly full') {
-  console.log('Arms and legs are getting hairier');
-} else if (moonPhase === 'mostly new') {
-  console.log('Back on two feet');
-} else {
-  console.log('Invalid moon phase');
-}
-// End else if Statements
+// End Parameters
 //
 //
-// Logical Operators
-
-let moonPhase = 'solar eclipse';
-let isFoggyNight = true;
-
-if (moonPhase === 'full') {
-  console.log('Howl!');
-} else if (moonPhase === 'mostly full') {
-  console.log('Arms and legs are getting hairier');
-} else if (moonPhase === 'mostly new') {
-  console.log('Back on two feet');
-} else {
-  console.log('Invalid moon phase');
-}
-
-// #2 -- returns "Invalid moon phase"
-let moonPhase = 'full';
-let isFoggyNight = true;
-
-if (moonPhase === 'full' && isFoggyNight === true) {
-  console.log('Howl!');
-} else if (moonPhase === 'mostly full') {
-  console.log('Arms and legs are getting hairier');
-} else if (moonPhase === 'mostly new') {
-  console.log('Back on two feet');
-} else {
-  console.log('Invalid moon phase');
-}
-
-// #3
-let moonPhase = 'full';
-let isFoggyNight = false;
-
-if (moonPhase === 'full' && isFoggyNight === true) {
-  console.log('Howl!');
-} else if (moonPhase === 'mostly full') {
-  console.log('Arms and legs are getting hairier');
-} else if (moonPhase === 'mostly new') {
-  console.log('Back on two feet');
-} else {
-  console.log('Invalid moon phase');
-}
-
-// #4
-let moonPhase = 'full';
-let isFoggyNight = false;
-
-if (moonPhase === 'full' || isFoggyNight === true) {
-  console.log('Howl!');
-} else if (moonPhase === 'mostly full') {
-  console.log('Arms and legs are getting hairier');
-} else if (moonPhase === 'mostly new') {
-  console.log('Back on two feet');
-} else {
-  console.log('Invalid moon phase');
-}
-//The first block is executed
+// Return 1 and 2
 //
-// End Logical Operators
-//
-// switch statements default at the end
-let moonPhase = 'full';
+// let orderCount = 0;
 
-switch (moonPhase) {
-  case 'full':
-    console.log('Howl!');
-    break;
-  case 'mostly full':
-    console.log('Arms and legs are getting hairier');
-    break;
-  case 'mostly new':
-    console.log('Back on two feet');
-    break;
-  default:
-    console.log('Invalid moon phase');
-    break;
+const takeOrder = (topping, crustType) => {
+  orderCount++;
+  console.log('Order: ' + crustType + ' pizza topped with ' + topping);
+};
+
+takeOrder('bacon', 'tossed crust');
+takeOrder('garlic', 'thin crust');
+takeOrder('sausage', 'stuffed crust');
+
+const getSubTotal = (itemCount) => {
+  return itemCount * 7.5;
+};
+// itemCount rather than orderCount Not sure why???
+
+console.log(getSubTotal(orderCount));
+
+
+// Return 2
+//
+// let orderCount = 0;
+
+const takeOrder = (topping, crustType) => {
+  orderCount++;
+  console.log('Order: ' + crustType + ' pizza topped with ' + topping);
+};
+
+takeOrder('bacon', 'tossed crust');
+takeOrder('garlic', 'thin crust');
+takeOrder('sausage', 'stuffed crust');
+
+const getSubTotal = (itemCount) => {
+  return itemCount * 7.5;
+};
+// Inside the getTax() function, call your getSubTotal() function and pass it the argument itemCount to get the subtotal, and then multiply the returned value by 6% (0.06). Make sure to return the result of this operation.
+const getTax = (itemCount) => {
+  return getSubTotal(itemCount) * 0.06
 }
-// default at the end is the 'else'
+
+const getTotal = (itemCount) => {
+  return getTax(itemCount) + getSubTotal(itemCount)
+}
+
+console.log(getSubTotal(orderCount));
+
+console.log(getTotal(orderCount))
+
+// End Return 1 and 2
 //
 //
-// end switch Statements
+// Function Declarations
+function isGreaterThan(numberOne, numberTwo) {
+  if (numberOne > numberTwo) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+isGreaterThan(7, 5)
+
+// End Function Declarations
+
+
+// Function Expressions
 //
+// Refactor the function declaration to be a function expression using arrow function syntax.
+// Be sure to call the function at the end.
 //
-// Ternary Operator
-let isLocked = false;
-
-if (isLocked) {
-  console.log('You will need a key to open the door.');
-} else {
-  console.log('You will not need a key to open the door.');
+// function isGreaterThan(numberOne, numberTwo){
+//   if(numberOne > numberTwo){
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// isGreaterThan(4, 8)
+//
+const isGreaterThan = (numberOne, numberTwo) => {
+  if(numberOne > numberTwo){
+    return true;
+  } else {
+    return false;
+  }
 }
 
-let isCorrect = true;
+isGreaterThan(4, 8)
 
-if (isCorrect) {
-  console.log('Correct!');
-} else {
-  console.log('Incorrect!');
-}
-
-let favoritePhrase = 'Love That!';
-
-if (favoritePhrase === 'Love That!') {
-  console.log('I love that!');
-} else {
-  console.log("I don't love that!");
-}
+// End Function Expressions
 
 
-// Refactored to:
-let isLocked = false;
+// Arrow Functions
 
-isLocked ? console.log('You will need a key to open the door.') : console.log('You will not need a key to open the door.');
+// Refactor the volumeOfSphere function
+//
+// const volumeOfSphere = (diameter) => {
+//   return (1/6) * Math.PI * diameter * diameter * diameter;
+// };
+//
+// console.log('The volume of a sphere is ' + volumeOfSphere(10) + ' cubic centimeters');
+//
+const volumeOfSphere = diameter => (1/6) * Math.PI * diameter * diameter * diameter;
 
-let isCorrect = true;
 
-isCorrect ? console.log('Correct!') : console.log('Incorrect!');
+console.log('The volume of a sphere is ' + volumeOfSphere(10) + ' cubic centimeters');
 
-
-let favoritePhrase = 'Love That!';
-
-favoritePhrase === 'Love That!' ? console.log('I love that!') : console.log("I don't love that!");
-// End Ternary Operator
+// End Arrow Functions
