@@ -1,73 +1,250 @@
-// Variables
-// // This line of code sets the variable location to the string New York City
-const location = 'New York City';
+// Intro to Control Flow
+let userName = 'Eric';
+let knowsJavaScript = true;
 
-// This line of code sets the variable latitude to the number 40.7
-let latitude = 40.7;
-
-// This line of code sets the variable inNorthernHemisphere to true
-let inNorthernHemisphere = true;
-console.log(location);
-console.log(latitude);
-console.log(inNorthernHemisphere);
-// End Variables
+if (knowsJavaScript && userName) {
+  console.log('Great, ' + userName + '! Get ready to practice your JavaScript!');
+} else if (knowsJavaScript) {
+  console.log('Great! Get ready to practice your JavaScript!');
+} else if (userName) {
+  console.log('Great, ' + userName + '! Get ready to learn something new!');
+} else {
+  console.log('Great! Get ready to learn something new!');
+}
+// End Intro to Control Flow
 //
 //
-// Create a Variable: Const
-const entree = 'Enchiladas';
-
-const price = 12;
-
-console.log(entree);
-console.log(price);
-
-entree = 'Tacos';
-// End Create a Variable Const
+// if/else statements
+// Write an if/else statement that uses isSoccerFan as its condition. If it is true, then log, Goal!. If it is false, then log, No goal!.
+let isSoccerFan = true;
+if (isSoccerFan === true) {
+  console.log('Goal!');
+} else {
+  console.log('No goal!');
+}
+// End if/else statements
 //
 //
-// Create a variable: let
-let changeMe = true;
+//True and False Values 1 and 2
+// let wordCount = 1;
 
-changeMe = false;
-console.log(changeMe);
-// End Create a variable: let
-//
-//
-// Undefined
-let notDefined;
-console.log(notDefined);
-let valueless = undefined;
-console.log(valueless);
-// End Undefined
-//
-//
-// Mathematical Assignment Operators
-let molecule = 16;
-let particle = 18;
-let assay = 3;
+if (wordCount) {
+  console.log("Great! You've started your work!");
+} else {
+  console.log('Better get to work!');
+}
 
-// Add and assign to molecule below
-molecule += 16;
 
-// Multiply and assign to particle below
-particle *= 6.02;
-console.log(particle);
+let favoritePhrase = 'You dropped your smile!';
 
-// Increment assay by 1
-assay++;
-// End Mathematical Assignment Operators
+if (!favoritePhrase) {
+  console.log("This string doesn't seem to be empty.");
+} else {
+  console.log('This string is definitely empty.');
+}
+// End True and False Values
+
+
+// Comparison Operators 1 and 2
+let hungerLevel = 5;
+if (hungerLevel > 7) {
+  console.log('Time to eat!');
+} else {
+  console.log("We can eat later!");
+}
+
+let hungerLevel = 10;
+if (hungerLevel > 7) {
+  console.log('Time to eat!');
+} else {
+  console.log("We can eat later!");
+}
+
+// Part 2
+let moonPhase = 'full';
+
+if (moonPhase === 'full') {
+  console.log('Howl!');
+} else {
+  console.log('I swear I am not a werewolf.');
+}
+// End Comparison Operators
+
+
+// else if Statements
+let moonPhase = 'full';
+
+if (moonPhase === 'full') {
+  console.log('Howl!');
+} else if (moonPhase === 'mostly full') {
+  console.log('Arms and legs are getting hairier');
+} else if (moonPhase === 'mostly new') {
+  console.log('Back on two feet');
+} else {
+  console.log('Invalid moon phase');
+}
+
+// #2
+let moonPhase = 'mostly full';
+
+if (moonPhase === 'full') {
+  console.log('Howl!');
+} else if (moonPhase === 'mostly full') {
+  console.log('Arms and legs are getting hairier');
+} else if (moonPhase === 'mostly new') {
+  console.log('Back on two feet');
+} else {
+  console.log('Invalid moon phase');
+}
+
+// #3
+let moonPhase = 'mostly new';
+
+if (moonPhase === 'full') {
+  console.log('Howl!');
+} else if (moonPhase === 'mostly full') {
+  console.log('Arms and legs are getting hairier');
+} else if (moonPhase === 'mostly new') {
+  console.log('Back on two feet');
+} else {
+  console.log('Invalid moon phase');
+}
+
+// #4
+let moonPhase = 'solar eclipse';
+
+if (moonPhase === 'full') {
+  console.log('Howl!');
+} else if (moonPhase === 'mostly full') {
+  console.log('Arms and legs are getting hairier');
+} else if (moonPhase === 'mostly new') {
+  console.log('Back on two feet');
+} else {
+  console.log('Invalid moon phase');
+}
+// End else if Statements
 //
 //
-// String Interpolation 1 and 2
-let favoriteAnimal = "Monkey";
+// Logical Operators
 
-console.log('My favorite animal: ' + favoriteAnimal);
+let moonPhase = 'solar eclipse';
+let isFoggyNight = true;
 
+if (moonPhase === 'full') {
+  console.log('Howl!');
+} else if (moonPhase === 'mostly full') {
+  console.log('Arms and legs are getting hairier');
+} else if (moonPhase === 'mostly new') {
+  console.log('Back on two feet');
+} else {
+  console.log('Invalid moon phase');
+}
+
+// #2 -- returns "Invalid moon phase"
+let moonPhase = 'full';
+let isFoggyNight = true;
+
+if (moonPhase === 'full' && isFoggyNight === true) {
+  console.log('Howl!');
+} else if (moonPhase === 'mostly full') {
+  console.log('Arms and legs are getting hairier');
+} else if (moonPhase === 'mostly new') {
+  console.log('Back on two feet');
+} else {
+  console.log('Invalid moon phase');
+}
+
+// #3
+let moonPhase = 'full';
+let isFoggyNight = false;
+
+if (moonPhase === 'full' && isFoggyNight === true) {
+  console.log('Howl!');
+} else if (moonPhase === 'mostly full') {
+  console.log('Arms and legs are getting hairier');
+} else if (moonPhase === 'mostly new') {
+  console.log('Back on two feet');
+} else {
+  console.log('Invalid moon phase');
+}
+
+// #4
+let moonPhase = 'full';
+let isFoggyNight = false;
+
+if (moonPhase === 'full' || isFoggyNight === true) {
+  console.log('Howl!');
+} else if (moonPhase === 'mostly full') {
+  console.log('Arms and legs are getting hairier');
+} else if (moonPhase === 'mostly new') {
+  console.log('Back on two feet');
+} else {
+  console.log('Invalid moon phase');
+}
+//The first block is executed
+//
+// End Logical Operators
+//
+// switch statements default at the end
+let moonPhase = 'full';
+
+switch (moonPhase) {
+  case 'full':
+    console.log('Howl!');
+    break;
+  case 'mostly full':
+    console.log('Arms and legs are getting hairier');
+    break;
+  case 'mostly new':
+    console.log('Back on two feet');
+    break;
+  default:
+    console.log('Invalid moon phase');
+    break;
+}
+// default at the end is the 'else'
 //
 //
-let myName = 'Eric';
-let myCity = 'Utrecht';
+// end switch Statements
+//
+//
+// Ternary Operator
+let isLocked = false;
 
-console.log(`My name is ${myName}. My favorite city is ${myCity}.`);
-// In the example above, the backticks (`) wrap the entire string.
-// End String Interpolation
+if (isLocked) {
+  console.log('You will need a key to open the door.');
+} else {
+  console.log('You will not need a key to open the door.');
+}
+
+let isCorrect = true;
+
+if (isCorrect) {
+  console.log('Correct!');
+} else {
+  console.log('Incorrect!');
+}
+
+let favoritePhrase = 'Love That!';
+
+if (favoritePhrase === 'Love That!') {
+  console.log('I love that!');
+} else {
+  console.log("I don't love that!");
+}
+
+
+// Refactored to:
+let isLocked = false;
+
+isLocked ? console.log('You will need a key to open the door.') : console.log('You will not need a key to open the door.');
+
+let isCorrect = true;
+
+isCorrect ? console.log('Correct!') : console.log('Incorrect!');
+
+
+let favoritePhrase = 'Love That!';
+
+favoritePhrase === 'Love That!' ? console.log('I love that!') : console.log("I don't love that!");
+// End Ternary Operator
