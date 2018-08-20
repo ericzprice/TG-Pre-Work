@@ -1,24 +1,3 @@
-// JS: Libraries
-console.log(Math.floor(Math.random() * 100))
-console.log(Math.ceil(43.8))
-console.log(Number.isInteger(2017))
-// End JS: Libraries
-
-
-// JS: Comments
-//
-// Opening line
-console.log('It was love at first sight.');
-
-/* console.log('The first time Yossarian saw the chaplain he fell madly in love with him.');
-console.log('Yossarian was in the hospital with a pain in his liver that fell just short of being jaundice.');
-console.log('The doctors were puzzled by the fact that it wasn\'t quite jaundice.');
-console.log('If it became jaundice they could treat it.');
-console.log('If it didn\'t become jaundice and went away they could discharge him.');
-console.log('But this just being short of jaundice all the time confused them.'); */
-// End JS: Comments
-
-
 // Variables
 // // This line of code sets the variable location to the string New York City
 const location = 'New York City';
@@ -46,4 +25,49 @@ entree = 'Tacos';
 // End Create a Variable Const
 //
 //
+// Create a variable: let
+let changeMe = true;
+
+changeMe = false;
+console.log(changeMe);
+// End Create a variable: let
 //
+//
+// Undefined
+let notDefined;
+console.log(notDefined);
+let valueless = undefined;
+console.log(valueless);
+// End Undefined
+//
+//
+// Mathematical Assignment Operators
+let molecule = 16;
+let particle = 18;
+let assay = 3;
+
+// Add and assign to molecule below
+molecule += 16;
+
+// Multiply and assign to particle below
+particle *= 6.02;
+console.log(particle);
+
+// Increment assay by 1
+assay++;
+// End Mathematical Assignment Operators
+//
+//
+// String Interpolation 1 and 2
+let favoriteAnimal = "Monkey";
+
+console.log('My favorite animal: ' + favoriteAnimal);
+
+//
+//
+let myName = 'Eric';
+let myCity = 'Utrecht';
+
+console.log(`My name is ${myName}. My favorite city is ${myCity}.`);
+// In the example above, the backticks (`) wrap the entire string.
+// End String Interpolation
