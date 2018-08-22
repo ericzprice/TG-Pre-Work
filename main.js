@@ -1,89 +1,24 @@
+//Modules
+// module.exports
+const Airplane = {};
+// Within the same file, add a property to the Airplane object named myAirplane and set it equal to "StarJet".
+Airplane.myAirplane = "StarJet";
+
+module.exports = Airplane;
+// end module.exports
 
 
-// Inheritance 5
-class HospitalEmployee {
-  constructor(name) {
-    this._name = name;
-    this._remainingVacationDays = 20;
-  }
+// require()
+const Airplane = require('./1-airplane.js');
+// In 1-missionControl.js use the require() function to import the Airplane module from 1-airplane.js.
+// Recall that you will need to use the precise name of the file that contains the module.
 
-  get name() {
-    return this._name;
-  }
-
-  get remainingVacationDays() {
-    return this._remainingVacationDays;
-  }
-
-  takeVacationDays(daysOff) {
-    this._remainingVacationDays -= daysOff;
-  }
+function displayAirplane() {
+  console.log(Airplane.myAirplane);
 }
+// In 1-missionControl.js, define a function displayAirplane(). In the function, log the value of the module and its property to the console.
 
-class Nurse extends HospitalEmployee {
-  constructor(name, certifications) {
-    super(name);
-    this._certifications = certifications;
-  }
-// Under the Nurse constructor(), add a getter that returns the value saved to the Nurse instance's _certifications.
-  get certifications() {
-    return this._certifications;
-  }
-  // Add a method called addCertification under the certifications getter.
-  // The method should accept one input (newCertification). Inside the method, use the push method to add the newCertification value to the nurse's certifications array.
-  addCertification(newCertification) {
-    this._certifications.push(newCertification);
-  }
-}
-
-const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
-nurseOlynyk.takeVacationDays(5);
-console.log(nurseOlynyk.remainingVacationDays);
-nurseOlynyk.addCertification('Genetics');
-console.log(nurseOlynyk.certifications);
-// End Inheritance 5
+displayAirplane();
+// End require()
 //
 //
-// Static methods
-class HospitalEmployee {
-  constructor(name) {
-    this._name = name;
-    this._remainingVacationDays = 20;
-  }
-
-  get name() {
-    return this._name;
-  }
-
-  get remainingVacationDays() {
-    return this._remainingVacationDays;
-  }
-
-  takeVacationDays(daysOff) {
-    this._remainingVacationDays -= daysOff;
-  }
-// Inside of your HospitalEmployee class, create a static method called generatePassword. When it's called, this method should return a random integer between zero and 10,000.
-  static generatePassword() {
-    return Math.floor(Math.random() * 10000);
-  }
-}
-
-class Nurse extends HospitalEmployee {
-  constructor(name, certifications) {
-    super(name);
-    this._certifications = certifications;
-  }
-
-  get certifications() {
-    return this._certifications;
-  }
-
-  addCertification(newCertification) {
-    this.certifications.push(newCertification);
-  }
-}
-
-const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
-nurseOlynyk.takeVacationDays(5);
-console.log(nurseOlynyk.remainingVacationDays);
-nurseOlynyk.addCertification('Genetics');
