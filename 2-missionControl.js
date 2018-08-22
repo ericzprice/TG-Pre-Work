@@ -1,15 +1,23 @@
+// Named Imports --NEEDS STUDY
 
+import {availableAirplanes, flightRequirements, meetsStaffRequirements} from './airplane';
 
-import Airplane from './airplane';
-
-// Within the body of the displayFuelCapacity function, use forEach() to iterate over the Airplane.availableAirplanes array.
-// The forEach() should take an anonymous function as a parameter. We'll add more in the next step.
+// Within the body of the displayStaffStatus() function, use the forEach to iterate over the availableAirplanes array.
+// Specifically, the forEach() should take a function as a parameter. The function should in turn take element as a parameter.
 function displayFuelCapacity() {
-  Airplane.availableAirplanes.forEach(function(element){
-        // Pass the anonymous function you created in the last step a parameter of element.
-  console.log('Fuel Capacity of ' + element.name + ': ' + element.fuelCapacity);
-  // Within the displayFuelCapacity function, use console.log() to output the element's name and its fuel capacity.
+  availableAirplanes.forEach(function(element) {
+    console.log('Fuel Capacity of ' + element.name + ': ' + element.fuelCapacity);
   });
 }
 
 displayFuelCapacity();
+
+function displayStaffStatus() {
+  availableAirplanes.forEach(function(element) {
+   console.log(element.name + ' meets staff requirements: ' + meetsStaffRequirements(element.availableStaff, flightRequirements.requiredStaff) );
+  });
+}
+
+displayStaffStatus();
+
+// End Named Imports
