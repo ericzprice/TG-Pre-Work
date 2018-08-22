@@ -1,69 +1,141 @@
-// .filter()
-let randomNumbers = [375, 200, 3.14, 7, 13, 852];
-
-// Call .filter() on randomNumbers below
-
-let smallNumbers = randomNumbers.filter(num => num < 250);
-
-console.log(smallNumbers);
-// [ 200, 3.14, 7, 13 ]
-
-// 2.
-let favoriteWords = ['nostalgia', 'hyperbole', 'fervent', 'esoteric', 'serene'];
-
-let longFavoriteWords = favoriteWords.filter(word => word.length > 7);
-// Refactor the code above using arrow function syntax
-console.log(longFavoriteWords);
-// [ 'nostalgia', 'hyperbole', 'esoteric' ]
+// Objects: 1
+let person = {
+  name: 'Eric',
+  age: 45
+};
+// End Objects: 1
 //
 //
-// End .filter()
+// Accessing Object Properties 1
+let person = {
+  name: 'Eric',
+  age: 45
+};
+console.log(person.name);
+console.log(person.age);
+// End Accessing Object Properties 1
 //
 //
-// Iterator Documentation
-let words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
-// In the code editor, there is an array called words. We want to create a new array of interesting words. The first thing we want to do is check if there are words that are fewer than 6 characters long. There is something missing in the words.some() method call. Fix this method so that true is printed to the console.
-
-console.log(words.some(function(word) {
-  return word.length < 6;
-}));
-// True
-// Use filter to create a new array
-
-let interestingWords = words.filter(word => word.length > 5);
-// The method returned true, which means there are some words in the array that are shorter than six characters. Use the .filter() method to save any words longer than 5 characters to a new array called interestingWords, declared with let.
-console.log(interestingWords);
-// [ 'unique', 'uncanny', 'oxymoron' ]
-//
-console.log(interestingWords.every(word =>  word.length > 5));
-// True
-// End Iterator Documentation
+// Accessing Object Properties 2
+let person = {
+  name: 'Eric',
+  age: 45
+};
+console.log(person['name']);
+console.log(person['age']);
+// End Accessing Object Properties 2
 //
 //
-// Choose the Right Iterator
+// Accessing Object Properties 3
+let person = {
+  name: 'Eric',
+  age: 45,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM'
+};
 
-let cities = ['Nashville', 'Charlotte', 'Asheville', 'Austin', 'Boulder'];
+console.log(person['name']);
+console.log(person['age']);
 
-let nums = [1, 50, 75, 200, 350, 525, 1000];
+let day = 'Tuesday';
+let alarm;
 
-//  Choose a method that will return undefined
-cities.forEach(city => console.log('Have you visited ' + city + '?'));
-// Have you visited Nashville?
-// Have you visited Charlotte?
-// Have you visited Asheville?
-// Have you visited Austin?
-// Have you visited Boulder?
+if (day === 'Saturday' || day === 'Sunday' ) {
+  alarm = 'weekendAlarm';
+} else {
+  alarm = 'weekAlarm';
+}
 
-// Choose a method that will return a new array
-let longCities = cities.filter(city => city.length > 7);
-console.log(longCities);
- // 'Nashville', 'Charlotte', 'Asheville' ]
- //
-// Choose a method that will return a new array
-let smallerNums = nums.map(num => num - 5);
- console.log(smallerNums);
- // [-4, 45, 70, 195, 345, 520, 995 ]
- //
-// Choose a method that will return a boolean value
-nums.every(num => num < 0);
-// End Choose the Right Iterator
+console.log(person[alarm]);
+// End Accessing Object Properties 3
+//
+//
+// Adding a Property
+let person = {
+  name: 'Eric',
+  age: 45,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM'
+};
+
+person.hobbies = ['Guitar', 'Magic tricks'];
+console.log(person.hobbies);
+
+console.log(person['name']);
+console.log(person['age']);
+
+let day = 'Tuesday';
+let alarm;
+
+if (day === 'Saturday' || day === 'Sunday' ) {
+  alarm = 'weekendAlarm';
+} else {
+  alarm = 'weekAlarm';
+}
+
+console.log(person[alarm]);
+
+// End Adding a Property
+//
+//
+// Editing a Property
+let person = {
+  name: 'Eric',
+  age: 45,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM'
+};
+
+person.hobbies = ['Guitar'];
+console.log(person.hobbies);
+
+console.log(person['name']);
+console.log(person['age']);
+
+let day = 'Tuesday';
+let alarm;
+
+if (day === 'Saturday' || day === 'Sunday' ) {
+  alarm = 'weekendAlarm';
+} else {
+  alarm = 'weekAlarm';
+}
+
+console.log(person[alarm]);
+
+// End Editing a Property
+//
+//
+// Methods
+let person = {
+  name: 'Eric',
+  age: 45,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM',
+  sayHello: () => {
+    return 'Hello, there!';
+  }
+};
+
+console.log(person.sayHello());
+
+person.hobbies = ['Basketball', 'Coaching'];
+person.hobbies = ['Basketball'];
+console.log(person.hobbies);
+
+
+console.log(person['name']);
+console.log(person['age']);
+
+let day = 'Tuesday';
+let alarm;
+
+if (day === 'Saturday' || day === 'Sunday' ) {
+  alarm = 'weekendAlarm';
+} else {
+  alarm = 'weekAlarm';
+}
+
+console.log(person[alarm]);
+//
+// End Methods
