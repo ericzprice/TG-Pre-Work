@@ -1,4 +1,4 @@
-// Import
+
 
 import Airplane from './airplane';
 
@@ -13,5 +13,3 @@ function displayFuelCapacity() {
 }
 
 displayFuelCapacity();
-
-// End Import

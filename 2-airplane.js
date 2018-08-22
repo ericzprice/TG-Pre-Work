@@ -1,19 +1,28 @@
-// export default
+// Named Exports --STUDY THIS MORE
 
-let Airplane = {};
-// Now that we have an object Airplane, we can continue by adding data in the form of properties and values to the Airplane module.
-// Create an availableAirplanes variable and set it equal to an empty array. Be sure that availableAirplanes is a property of the Airplane object.
-Airplane.availableAirplanes = [
-{
-  name: 'AeroJet',
-  fuelCapacity: 800
- },
- {
-   name: 'SkyJet',
-  fuelCapacity: 500
- }
-];
+let availableAirplanes = [{
+ name: 'AeroJet',
+ fuelCapacity: 800,
+ availableStaff: ['pilots', 'flightAttendants', 'engineers', 'medicalAssistance', 'sensorOperators'],
+},
+{name: 'SkyJet',
+ fuelCapacity: 500,
+ availableStaff: ['pilots', 'flightAttendants']
+}];
 
-export default Airplane;
+let flightRequirements = {
+  requiredStaff: 4,
+};
 
-// End export default
+function meetsStaffRequirements(availableStaff, requiredStaff) {
+      // In the body of the meetsStaffRequirements() function, write logic to check if the length of the availableStaff array is greater than or equal to requiredStaff.
+  if (availableStaff.length >= requiredStaff) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+export { availableAirplanes, flightRequirements, meetsStaffRequirements};
+
+// End Named Exports
