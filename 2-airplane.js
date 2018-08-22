@@ -1,6 +1,6 @@
-// Export Named Exports
+// Export As
 
-export let availableAirplanes = [
+let availableAirplanes = [
 {name: 'AeroJet',
  fuelCapacity: 800,
  availableStaff: ['pilots', 'flightAttendants', 'engineers', 'medicalAssistance', 'sensorOperators'],
@@ -15,21 +15,20 @@ export let availableAirplanes = [
 }
 ];
 
-export let flightRequirements = {
+let flightRequirements = {
   requiredStaff: 4,
   requiredSpeedRange: 700
 };
 
-// Use export to export the variables as soon as they are declared, and remove the export statement at the bottom of the file.
-export function meetsStaffRequirements(availableStaff, requiredStaff) {
+function meetsStaffRequirements(availableStaff, requiredStaff) {
   if (availableStaff.length >= requiredStaff) {
     return true;
   } else {
     return false;
   }
 };
-// Continuing with the same file, add a new function meetsSpeedRangeRequirements() that takes three arguments maxSpeed, minSpeed and requiredSpeedRange.
-export function meetsSpeedRangeRequirements(maxSpeed, minSpeed, requiredSpeedRange) {
+
+function meetsSpeedRangeRequirements(maxSpeed, minSpeed, requiredSpeedRange) {
   let range = maxSpeed - minSpeed;
   if (range > requiredSpeedRange) {
     return true;
@@ -38,5 +37,6 @@ export function meetsSpeedRangeRequirements(maxSpeed, minSpeed, requiredSpeedRan
   }
 };
 
+export { availableAirplanes as aircrafts, flightRequirements as flightReqs, meetsStaffRequirements as meetsStaffReqs, meetsSpeedRangeRequirements as meetsSpeedRangeReqs };
 
-// End Export Named Exports
+// End Export As
