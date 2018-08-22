@@ -1,6 +1,6 @@
-// Export As
+// Combining Export Statements
 
-let availableAirplanes = [
+export let availableAirplanes = [
 {name: 'AeroJet',
  fuelCapacity: 800,
  availableStaff: ['pilots', 'flightAttendants', 'engineers', 'medicalAssistance', 'sensorOperators'],
@@ -15,12 +15,12 @@ let availableAirplanes = [
 }
 ];
 
-let flightRequirements = {
+export let flightRequirements = {
   requiredStaff: 4,
   requiredSpeedRange: 700
 };
 
-function meetsStaffRequirements(availableStaff, requiredStaff) {
+export function meetsStaffRequirements(availableStaff, requiredStaff) {
   if (availableStaff.length >= requiredStaff) {
     return true;
   } else {
@@ -28,7 +28,7 @@ function meetsStaffRequirements(availableStaff, requiredStaff) {
   }
 };
 
-function meetsSpeedRangeRequirements(maxSpeed, minSpeed, requiredSpeedRange) {
+export function meetsSpeedRangeRequirements(maxSpeed, minSpeed, requiredSpeedRange) {
   let range = maxSpeed - minSpeed;
   if (range > requiredSpeedRange) {
     return true;
@@ -37,6 +37,5 @@ function meetsSpeedRangeRequirements(maxSpeed, minSpeed, requiredSpeedRange) {
   }
 };
 
-export { availableAirplanes as aircrafts, flightRequirements as flightReqs, meetsStaffRequirements as meetsStaffReqs, meetsSpeedRangeRequirements as meetsSpeedRangeReqs };
-
-// End Export As
+export default meetsSpeedRangeRequirements;
+// End Combining Export Statements
