@@ -1,9 +1,7 @@
-// Named Imports --NEEDS STUDY
+// Import Named Imports --NEEDS STUDY
 
-import {availableAirplanes, flightRequirements, meetsStaffRequirements} from './airplane';
+import {availableAirplanes, flightRequirements, meetsStaffRequirements, meetsSpeedRangeRequirements} from './airplane';
 
-// Within the body of the displayStaffStatus() function, use the forEach to iterate over the availableAirplanes array.
-// Specifically, the forEach() should take a function as a parameter. The function should in turn take element as a parameter.
 function displayFuelCapacity() {
   availableAirplanes.forEach(function(element) {
     console.log('Fuel Capacity of ' + element.name + ': ' + element.fuelCapacity);
@@ -20,4 +18,14 @@ function displayStaffStatus() {
 
 displayStaffStatus();
 
-// End Named Imports
+function displaySpeedRangeStatus() {
+      // Within the displaySpeedRangeStatus() function, use the forEach method to iterate over each element in the availableAirplanes array.
+      // Again, the forEach() should take a function as a parameter; this function should take element as a parameter.
+  availableAirplanes.forEach(function(element) {
+   console.log(element.name + ' meets speed range requirements:' + meetsSpeedRangeRequirements(element.maxSpeed, element.minSpeed, flightRequirements.requiredSpeedRange));
+  });
+}
+
+displaySpeedRangeStatus();
+
+// End Import Named Imports
