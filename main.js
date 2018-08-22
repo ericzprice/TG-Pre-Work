@@ -1,214 +1,193 @@
-
+// Classes
 //
-// ES6 Methods
-let person = {
-  name: 'Eric',
-  age: 45,
-  weekendAlarm: 'No alarms needed',
-  weekAlarm: 'Alarm set to 7AM',
-
-  sayHello: function() {
-    return 'Hello, there!';
-  },
- // USE A COMMA RATHER THAN ; AFTER THE {}
- //
- //
-  sayGoodbye() {
-        // This syntax, which only requires the name of the method and parentheses, is best practice for defining methods.
-    return 'Goodbye!';
+// class Dog {
+  constructor(name) {
+    this._name = name;
+    this._behavior = 0;
   }
 
-};
+  get name() {
+    return this._name;
+  }
+  get behavior() {
+    return this._behavior;
+  }
 
-console.log(person.sayHello());
-
-person.hobbies = ['skateboarding', 'juggling'];
-person.hobbies = ['skateboarding'];
-console.log(person.hobbies);
-
-
-console.log(person['name']);
-console.log(person['age']);
-
-let day = 'Tuesday';
-let alarm;
-
-if (day === 'Saturday' || day === 'Sunday' ) {
-  alarm = 'weekendAlarm';
-} else {
-  alarm = 'weekAlarm';
+  incrementBehavior() {
+    this._behavior ++;
+  }
+}
+// Take, for example, an object representing a dog named halley. This dog's name (a key) is "Halley" (a value) and has an age (another key) of 3 (another value). We create the halley object below:
+const halley = new Dog('Halley');
+console.log(halley.name); // Print name value to console
+console.log(halley.behavior); // Print behavior value to console
+halley.incrementBehavior(); // Add one to behavior
+console.log(halley.name); // Print name value to console
+console.log(halley.behavior); // Print behavior value to console
+// Halley
+// 0
+// Halley
+// 1
+//
+// End Classes Intro
+//
+//
+// Constructor
+class Surgeon {
+  constructor(name, department) {
+        // Inside the Surgeon constructor(), create name and department properties and set them equal to your input parameters.
+    this._name = name;
+    this._department = department;
+  }
+}
+// End Constructor
+//
+//
+// Instance
+class Surgeon {
+  constructor(name, department) {
+    this.name = name;
+    this.department = department;
+  }
 }
 
-console.log(person[alarm]);
-// End ES6 Methods
+// we use the new keyword to create an instance of our Dog class.
+const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
+const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
+
+// End Instance
 //
 //
-// The this Keyword 1
-// let person = {
-  name: 'Eric',
-  age: 45,
-  weekendAlarm: 'No alarms needed',
-  weekAlarm: 'Alarm set to 7AM',
-
-  sayHello: function() {
-    return `Hello, my name is ${this.name }` ;
-    // In place of the name here, use this to interpolate your name property.
-  },
-
-  sayGoodbye() {
-    return 'Goodbye!';
+// Methods
+class Surgeon {
+  constructor(name, department) {
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
   }
 
-};
+  get name() {
+    return this._name;
+  }
 
-console.log(person.sayHello());
+  get department() {
+    return this._department;
+  }
 
-person.hobbies = ['skateboarding', 'juggling'];
-person.hobbies = ['skateboarding'];
-console.log(person.hobbies);
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  Under the remainingVacationDays getter, create a method called takeVacationDays that accepts one argument named daysOff.
 
-
-console.log(person['name']);
-console.log(person['age']);
-
-let day = 'Tuesday';
-let alarm;
-
-if (day === 'Saturday' || day === 'Sunday' ) {
-  alarm = 'weekendAlarm';
-} else {
-  alarm = 'weekAlarm';
+// Inside of the method, subtract daysOff from the number saved to _remainingVacationDays.
+// Set _remainingVacationDays to the result.
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
 }
 
-console.log(person[alarm]);
-// End The this Keyword 1
+const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
+const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
+// End Methods
 //
 //
-// The this Keyword 2
-let person = {
-  name: 'Eric',
-  age: 45,
-  weekendAlarm: 'No alarms needed',
-  weekAlarm: 'Alarm set to 7AM',
-
-  sayHello: function() {
-    return `Hello, my name is ${this.name }` ;
-  },
-
-  sayGoodbye() {
-    return 'Goodbye!';
+// Method Calls
+class Surgeon {
+  constructor(name, department) {
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
   }
 
-};
+  get name() {
+    return this._name;
+  }
 
-let friend = {
-  name: 'Aaron',
-};
+  get department() {
+    return this._department;
+  }
 
-friend.sayHello = person.sayHello;
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
 
-console.log(friend.sayHello());
-console.log(person.sayHello());
-
-person.hobbies = ['skateboarding', 'juggling'];
-person.hobbies = ['skateboarding'];
-console.log(person.hobbies);
-
-
-console.log(person['name']);
-console.log(person['age']);
-
-let day = 'Tuesday';
-let alarm;
-
-if (day === 'Saturday' || day === 'Sunday' ) {
-  alarm = 'weekendAlarm';
-} else {
-  alarm = 'weekAlarm';
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
 }
 
-console.log(person[alarm]);
+const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
+const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
 
-// Hello, my name is Aaron
-// Hello, my name is Eric
-// [ 'skateboarding' ]
-// Eric
-// 45
-// Alarm set to 7AM
-// It logged your friend's name instead of yours because the meaning of this changed to the friend object, for which the name key is different.
-// End The this Keyword 2
+console.log(surgeonCurry.name);
+surgeonCurry.takeVacationDays(3);
+// After the call to .takeVacationDays(), use console.log() to print the value saved to the remainingVacationDays property of the surgeonCurry instance.
+console.log(surgeonCurry.remainingVacationDays);
+//
+// End Method Calls
 //
 //
-// Getters and Setters 1
-let person = {
-  _name: 'Lu Xun',
-  _age: 137,
-
-  // Let's consider a new person object. We want to add a setter method that changes the age of person.
-  // Notice, we already prepended the _age property with an underscore.
-  // Start by adding an empty .age() setter method.
-  set age(ageIn) {
-    if (typeof ageIn === 'number') {
-      this._age = ageIn;
-    }
-    // Inside of the setter we want to check if the user's input is valid. Create a conditional statement to check if a user's input is a number.If the input is a number, set the _age property to the input value. If the input is not a number, return the string, 'Invalid input'.
-    else {
-      console.log('Invalid input');
-      return 'Invalid input';
-    }
+// Inheritance 2
+class HospitalEmployee {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
   }
 
-};
-
-// End Getters and Setters 1
-//
-//
-// Getters and Setters 2
-// let person = {
-  _name: 'Lu Xun',
-  _age: 137,
-
-  set age(ageIn) {
-    if (typeof ageIn === 'number') {
-      this._age = ageIn;
-    }
-    else {
-      console.log('Invalid input');
-      return 'Invalid input';
-    }
+  get name() {
+    return this._name;
   }
 
-};
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  Under the getters, add a method called takeVacationDays.
 
-// Under your object, use dot notation to try changing the value of age to the string, 'Thirty-nine'.
-person.age = 'Thirty-nine';
-person.age = 39;
-// End Getters and Setters 2
+  This method should accept one argument, called daysOff.
 
-
-// Getters and Setters 3
-let person = {
-  _name: 'Eric',
-  _age: 50,
-
-  set age(ageIn) {
-    if (typeof ageIn === 'number') {
-      this._age = ageIn;
-    }
-    else {
-      console.log('Invalid input');
-      return 'Invalid input';
-    }
-  },
-    // Create a getter method for your _age property. Inside the method log the following string and return the value saved to _age:
-  get age() {
-    console.log(`${this._name} is ${this._age} years old.`);
-    return this._age;
+  // Inside the method, subtract daysOff from _remainingVacationDays. Save the result to _remainingVacationDays.
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+// End Inheritance 2
+//
+//
+// Inheritance 3
+// In this exercise, you will begin to create the Nurse class as a child of the HospitalEmployee class. Remember the Nurse class has the following properties and methods:
+class HospitalEmployee {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
   }
 
-};
+  get name() {
+    return this._name;
+  }
 
-person.age = 45;
-// Eric is 45 years old.
-// 
-// End Getters and Setters 3
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+
+class Nurse extends HospitalEmployee {
+      // In the Nurse constructor, call the parent's constructor method and pass the appropiate value(s).
+  constructor(name, certifications) {
+    super(name);
+    // Inside of the Nurse constructor, and under super, set _certifications.
+    this._certifications = certifications;
+  }
+}
+// Under the Nurse class, create a new instance of Nurse and save it to a constant variable named nurseOlynyk. Pass in the following values for each property:
+const nurseOlynyk = new Nurse('Olynyk', ['Trauma', 'Pediatrics']);
+// End Inheritance 3
+//
+//
+// Inheritance 4
+
+
+// End Inheritance 4
